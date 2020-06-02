@@ -39,7 +39,7 @@ For the ML pipeline of the pricing tool, we create a "**Meta holdout scheme with
 Such implementation proves to be performing great on this data, since it is computationally and time efficient, 
 while providing promising results.
 A diagram of the "Meta holdout scheme with OOF meta-features" is presented below followed by the architecture analysis.
-<img src=https://github.com/Harry-Kouraklis/Airbnb-Pricing-Optimization/blob/master/Meta%20holdout%20scheme%20with%20OOF%20meta-features.png alt="alt text" width=85% height=85%>
+<img src=https://github.com/Harry-Kouraklis/Airbnb-Pricing-Optimization/blob/master/Meta%20holdout%20scheme%20with%20OOF%20meta-features.png alt="alt text" width=89% height=89%>
 
 1. We split train data into K folds. Iterating though each fold: retrain 3 diverse models on all folds except the current fold. We then predict for the current fold.
 
@@ -48,10 +48,10 @@ them meta_train_set
 
 3.  We predict for test data. Let's call these features meta_test_set.
 
-4.  Split meta_train_set into two parts: train_metaA and train_metaB. Fit a meta-model to train_metaA while validating its 
+4.  We split meta_train_set into two parts: train_metaA and train_metaB. Fit a meta-model to train_metaA while validating its 
 hyperparameters on train_metaB.
 
-When the meta-model is validated, fit it to train_meta and predict for test_meta.
+When the meta-model is validated, we fit it to train_meta and predict for test_meta.
 
 The three algorithms we will be using are: **Catboost**, **Light GBM** and **Random Forrest**. The **meta-model** is a second **Catboost** Regressor.
 
