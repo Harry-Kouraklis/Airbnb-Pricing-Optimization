@@ -2,7 +2,7 @@
 This project aims to develop a smart pricing tool for the hosts of Airbnb, in order to maximize profit. 
 Application-specific feature engineering and 
 a "**Meta holdout scheme with OOF meta-features**" architecture is deployed in the pricing ML pipeline.
-Moreover, we create a clustering (unsupervised) model to help customers get similar recommendations.
+Moreover, a clustering (unsupervised) model is deployed, aiming to help customers get similar recommendations.
 
 ## Pricing tool
 Main challenge of this project was to develop a pricing tool that can suggest a price (or a price range) to hosts. It is important in
